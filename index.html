@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farmer Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Farmer Management System</h1>
+        <p>"Empowering Farmers, Enriching Lives"</p>
+        <nav>
+            <a href="#benefits">Benefits</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart</a>
+            <a href="#order">Order</a>
+        </nav>
+    </header>
+
+    <section id="benefits" class="container">
+        <h2>Benefits of Crop and Harvesting</h2>
+        <ul>
+            <li>Improved food security</li>
+            <li>Boosts farmer income</li>
+            <li>Ensures seasonal crop rotation</li>
+            <li>Prevents soil depletion</li>
+        </ul>
+    </section>
+
+    <section id="categories" class="container">
+        <h2>Select a Category</h2>
+        <button>Vegetables</button>
+        <button>Fruits</button>
+        <button>Trees</button>
+    </section>
+
+    <section id="products" class="container">
+        <h2>Products</h2>
+        <div class="grid">
+            <!-- Vegetables -->
+            <div class="card">
+                <h3>Tomato</h3>
+                <p>Harvest: 60 days | Water daily | Fertilize bi-weekly</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Potato</h3>
+                <p>Harvest: Winter | Water alternate days | Fertilize monthly</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Fruits -->
+            <div class="card">
+                <h3>Mango</h3>
+                <p>Harvest: Summer | Water weekly | Fertilize seasonally</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Banana</h3>
+                <p>Harvest: 90 days | Water twice weekly | Rich fertilizer</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Trees -->
+            <div class="card">
+                <h3>Coconut Tree</h3>
+                <p>Harvest: Summer | Needs sandy soil | Water weekly</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Teak</h3>
+                <p>Harvest: 20 years | Low water | Needs pruning</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart" class="container">
+        <h2>Your Cart</h2>
+        <p>Items added: <strong>3</strong></p>
+        <button>Buy Now</button>
+    </section>
+
+    <section id="order" class="container">
+        <h2>Order Details</h2>
+        <form>
+            <label>Name: <input type="text"></label><br>
+            <label>Contact Number: <input type="text"></label><br>
+            <label>Address: <textarea></textarea></label><br>
+            <label>Pincode: <input type="text"></label><br>
+            <label>City: <input type="text"></label><br>
+            <label>State: <input type="text"></label><br>
+
+            <h3>Payment Mode</h3>
+            <input type="radio" name="payment" value="cod"> Cash on Delivery<br>
+            <input type="radio" name="payment" value="phonepe"> PhonePe<br>
+            <input type="radio" name="payment" value="card"> Debit/Credit Card<br>
+            <input type="radio" name="payment" value="netbanking"> Net Banking<br><br>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <section id="confirmation" class="container">
+        <h2>Order Confirmed</h2>
+        <p>Thank you! Visit Again.</p>
+    </section>
+</body>
+</html>
