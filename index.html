@@ -1,110 +1,130 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Farmer Management</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Farmer Management</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Farmer Management System</h1>
-        <p>"Empowering Farmers, Enriching Lives"</p>
-        <nav>
-            <a href="#benefits">Benefits</a>
-            <a href="#categories">Categories</a>
-            <a href="#products">Products</a>
-            <a href="#cart">Cart</a>
-            <a href="#order">Order</a>
-        </nav>
-    </header>
 
-    <section id="benefits" class="container">
-        <h2>Benefits of Crop and Harvesting</h2>
-        <ul>
-            <li>Improved food security</li>
-            <li>Boosts farmer income</li>
-            <li>Ensures seasonal crop rotation</li>
-            <li>Prevents soil depletion</li>
-        </ul>
-    </section>
+  <header>
+    <h1>Welcome to Farmer Management System</h1>
+    <p>"Empowering Farmers, Enriching Lives"</p>
+    <nav>
+      <a href="#benefits">Benefits</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+      <a href="#cart">Cart</a>
+      <a href="#order">Order</a>
+    </nav>
+  </header>
 
-    <section id="categories" class="container">
-        <h2>Select a Category</h2>
-        <button>Vegetables</button>
-        <button>Fruits</button>
-        <button>Trees</button>
-    </section>
+  <section id="benefits" class="container">
+    <h2>Benefits of Crop and Harvesting</h2>
+    <ul>
+      <li>Boosts farmer income</li>
+      <li>Ensures soil productivity</li>
+      <li>Improves food supply</li>
+      <li>Encourages sustainable agriculture</li>
+    </ul>
+  </section>
 
-    <section id="products" class="container">
-        <h2>Products</h2>
-        <div class="grid">
-            <!-- Vegetables -->
-            <div class="card">
-                <h3>Tomato</h3>
-                <p>Harvest: 60 days | Water daily | Fertilize bi-weekly</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="card">
-                <h3>Potato</h3>
-                <p>Harvest: Winter | Water alternate days | Fertilize monthly</p>
-                <button>Add to Cart</button>
-            </div>
+  <section id="categories" class="container">
+    <h2>Select a Category</h2>
+    <button onclick="scrollToSection('vegetables')">Vegetables</button>
+    <button onclick="scrollToSection('fruits')">Fruits</button>
+    <button onclick="scrollToSection('trees')">Trees</button>
+  </section>
 
-            <!-- Fruits -->
-            <div class="card">
-                <h3>Mango</h3>
-                <p>Harvest: Summer | Water weekly | Fertilize seasonally</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="card">
-                <h3>Banana</h3>
-                <p>Harvest: 90 days | Water twice weekly | Rich fertilizer</p>
-                <button>Add to Cart</button>
-            </div>
+  <section id="products" class="container">
+    <h2>Products</h2>
 
-            <!-- Trees -->
-            <div class="card">
-                <h3>Coconut Tree</h3>
-                <p>Harvest: Summer | Needs sandy soil | Water weekly</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="card">
-                <h3>Teak</h3>
-                <p>Harvest: 20 years | Low water | Needs pruning</p>
-                <button>Add to Cart</button>
-            </div>
+    <!-- Vegetables -->
+    <div id="vegetables">
+      <h3>Vegetables</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Tomato</h4>
+          <p>Harvest: 60 days | Water: Daily | Fertilizer: Bi-weekly</p>
+          <button onclick="addToCart('Tomato')">Add to Cart</button>
         </div>
-    </section>
+        <div class="card">
+          <h4>Potato</h4>
+          <p>Harvest: Winter | Water: Alternate days | Fertilizer: Monthly</p>
+          <button onclick="addToCart('Potato')">Add to Cart</button>
+        </div>
+        <!-- Add 8 more vegetable cards similarly -->
+      </div>
+    </div>
 
-    <section id="cart" class="container">
-        <h2>Your Cart</h2>
-        <p>Items added: <strong>3</strong></p>
-        <button>Buy Now</button>
-    </section>
+    <!-- Fruits -->
+    <div id="fruits">
+      <h3>Fruits</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Mango</h4>
+          <p>Harvest: Summer | Water: Weekly | Fertilizer: Seasonally</p>
+          <button onclick="addToCart('Mango')">Add to Cart</button>
+        </div>
+        <div class="card">
+          <h4>Banana</h4>
+          <p>Harvest: 90 days | Water: Twice a week | Fertilizer: Rich organic</p>
+          <button onclick="addToCart('Banana')">Add to Cart</button>
+        </div>
+        <!-- Add 8 more fruit cards similarly -->
+      </div>
+    </div>
 
-    <section id="order" class="container">
-        <h2>Order Details</h2>
-        <form>
-            <label>Name: <input type="text"></label><br>
-            <label>Contact Number: <input type="text"></label><br>
-            <label>Address: <textarea></textarea></label><br>
-            <label>Pincode: <input type="text"></label><br>
-            <label>City: <input type="text"></label><br>
-            <label>State: <input type="text"></label><br>
+    <!-- Trees -->
+    <div id="trees">
+      <h3>Trees</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Coconut Tree</h4>
+          <p>Harvest: Summer | Water: Weekly | Fertilizer: Organic mix</p>
+          <button onclick="addToCart('Coconut Tree')">Add to Cart</button>
+        </div>
+        <div class="card">
+          <h4>Teak</h4>
+          <p>Harvest: 20 years | Water: Rare | Fertilizer: Nitrogen mix</p>
+          <button onclick="addToCart('Teak')">Add to Cart</button>
+        </div>
+        <!-- Add 10 more tree cards -->
+      </div>
+    </div>
+  </section>
 
-            <h3>Payment Mode</h3>
-            <input type="radio" name="payment" value="cod"> Cash on Delivery<br>
-            <input type="radio" name="payment" value="phonepe"> PhonePe<br>
-            <input type="radio" name="payment" value="card"> Debit/Credit Card<br>
-            <input type="radio" name="payment" value="netbanking"> Net Banking<br><br>
+  <section id="cart" class="container">
+    <h2>Your Cart</h2>
+    <p id="cartCount">Items added: 0</p>
+    <button onclick="scrollToSection('order')">Buy Now</button>
+  </section>
 
-            <button type="submit">Place Order</button>
-        </form>
-    </section>
+  <section id="order" class="container">
+    <h2>Order Details</h2>
+    <form onsubmit="return confirmOrder();">
+      <label>Name: <input type="text" required></label><br>
+      <label>Contact Number: <input type="text" required></label><br>
+      <label>Address: <textarea required></textarea></label><br>
+      <label>Pincode: <input type="text" required></label><br>
+      <label>City: <input type="text" required></label><br>
+      <label>State: <input type="text" required></label><br>
 
-    <section id="confirmation" class="container">
-        <h2>Order Confirmed</h2>
-        <p>Thank you! Visit Again.</p>
-    </section>
+      <h3>Payment Mode</h3>
+      <label><input type="radio" name="payment" required> Cash on Delivery</label><br>
+      <label><input type="radio" name="payment"> PhonePe</label><br>
+      <label><input type="radio" name="payment"> Debit/Credit Card</label><br>
+      <label><input type="radio" name="payment"> Net Banking</label><br><br>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <section id="confirmation" class="container" style="display:none;">
+    <h2>Order Confirmed!</h2>
+    <p>Thank you! Visit Again.</p>
+  </section>
+
 </body>
 </html>
